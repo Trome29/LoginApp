@@ -37,6 +37,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Log In">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="KzA-v3-OfN" kind="presentation" modalPresentationStyle="fullScreen" id="wtX-Gl-pAw"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="p0a-i0-wEU">
                                 <rect key="frame" x="36" y="458" width="318.33333333333331" height="28.333333333333314"/>
@@ -82,13 +85,36 @@
                     <view key="view" contentMode="scaleToFill" id="CLe-xd-83J">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1v6-tO-p8P">
+                                <rect key="frame" x="174" y="194" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChL-pj-00G">
+                                <rect key="frame" x="152.66666666666666" y="623" width="85" height="35"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4yb-FF-JH2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ChL-pj-00G" firstAttribute="centerX" secondItem="4yb-FF-JH2" secondAttribute="centerX" id="Ut5-T8-vMS"/>
+                            <constraint firstItem="4yb-FF-JH2" firstAttribute="bottom" secondItem="ChL-pj-00G" secondAttribute="bottom" constant="152" id="df2-Zm-ba7"/>
+                            <constraint firstItem="1v6-tO-p8P" firstAttribute="top" secondItem="4yb-FF-JH2" secondAttribute="top" constant="147" id="g1A-PC-8It"/>
+                            <constraint firstItem="1v6-tO-p8P" firstAttribute="centerX" secondItem="4yb-FF-JH2" secondAttribute="centerX" id="m48-Fk-ykB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingsLabel" destination="1v6-tO-p8P" id="k8F-ZE-6Q8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fWk-jR-OaN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="4"/>
+            <point key="canvasLocation" x="824.61538461538464" y="3.5545023696682461"/>
         </scene>
     </scenes>
     <resources>
