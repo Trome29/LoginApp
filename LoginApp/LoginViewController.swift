@@ -11,11 +11,9 @@ class LoginViewController: UIViewController {
     
     let login = "User"
     let password = "111"
-
+    
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +29,16 @@ class LoginViewController: UIViewController {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         if userNameTF.text != login || passwordTF.text != password {
             let alert = UIAlertController(title: "Invalid login or password", message: "Please, enter correct login and password", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+            let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                self.passwordTF.text = ""
+            }
+            alert.addAction(okAction)
             self.present(alert, animated: true, completion: nil)
         } else {
             welcomeVC.labelTextValue = "Hello, \(login)!"
         }
     }
+    
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
@@ -48,7 +50,7 @@ class LoginViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))
         self.present(alert, animated: true, completion: nil)
     }
-
+    
     @IBAction func forgotPasswordTapped() {
         let alert = UIAlertController(title: "Oops!", message: "Your password is \(password)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))
