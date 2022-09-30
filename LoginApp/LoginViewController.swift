@@ -10,8 +10,8 @@ import UIKit
 class LoginViewController: UIViewController {
     
     //MARK: Private properties
-    private let login = "User"
-    private let password = "111"
+    private let login = "Tim Cook"
+    private let password = "11160"
     
     //MARK: IBOutlets
     @IBOutlet var userNameTF: UITextField!
