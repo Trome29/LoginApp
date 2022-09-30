@@ -9,26 +9,30 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    let login = "User"
-    let password = "111"
+    //MARK: Private properties
+    private let login = "User"
+    private let password = "111"
     
+    //MARK: IBOutlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
-    // Метод для скрытия клавиатуры тапом по экрану
+    //MARK: Methods
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+        userNameTF.endEditing(true)
+        passwordTF.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        
         if userNameTF.text != login || passwordTF.text != password {
-            let alert = UIAlertController(title: "Invalid login or password", message: "Please, enter correct login and password", preferredStyle: .alert)
+            let alert = UIAlertController(
+                title: "Invalid login or password",
+                message: "Please, enter correct login and password",
+                preferredStyle: .alert
+            )
             let okAction = UIAlertAction(title: "OK", style: .default) { _ in
                 self.passwordTF.text = ""
             }
@@ -39,20 +43,28 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
+    //MARK: IBActions
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
     }
     
     @IBAction func forgotUserNameTapped() {
-        let alert = UIAlertController(title: "Oops!", message: "Your name is \(login) 😉", preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: "Oops!",
+            message: "Your name is \(login) 😉",
+            preferredStyle: .alert
+        )
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))
         self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func forgotPasswordTapped() {
-        let alert = UIAlertController(title: "Oops!", message: "Your password is \(password) 🤭", preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: "Oops!",
+            message: "Your password is \(password) 🤭",
+            preferredStyle: .alert
+        )
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))
         self.present(alert, animated: true, completion: nil)
     }

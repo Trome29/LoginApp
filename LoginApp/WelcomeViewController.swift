@@ -8,10 +8,14 @@
 import UIKit
 
 final class WelcomeViewController: UIViewController {
-    @IBOutlet var greetingsLabel: UILabel!
     
+    //MARK: Properties
     var labelTextValue: String!
     
+    //MARK: IBOutlets
+    @IBOutlet var greetingsLabel: UILabel!
+    
+    //MARK: ViewController LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         greetingsLabel.font = .systemFont(ofSize: 30)
@@ -22,10 +26,24 @@ final class WelcomeViewController: UIViewController {
         setGradientBackground()
         super.viewWillAppear(animated)
     }
+}
+
+//MARK: Extension
+extension WelcomeViewController {
     
     private func setGradientBackground() {
-        let colorTop =  UIColor(red: 240.0/255.0, green: 80.0/255.0, blue: 90.0/255.0, alpha: 0.5).cgColor
-        let colorBottom = UIColor(red: 80.0/255.0, green: 120.0/255.0, blue: 255.0/255.0, alpha: 0.5).cgColor
+        let colorTop =  UIColor(
+            red: 240.0/255.0,
+            green: 80.0/255.0,
+            blue: 90.0/255.0,
+            alpha: 0.5
+        ).cgColor
+        let colorBottom = UIColor(
+            red: 80.0/255.0,
+            green: 120.0/255.0,
+            blue: 255.0/255.0,
+            alpha: 0.5
+        ).cgColor
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorBottom]
@@ -34,5 +52,4 @@ final class WelcomeViewController: UIViewController {
         
         self.view.layer.insertSublayer(gradientLayer, at:0)
     }
-    
 }
