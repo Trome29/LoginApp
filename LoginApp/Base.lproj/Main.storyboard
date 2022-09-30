@@ -50,6 +50,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="forgotUserNameTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="ER2-ap-pvI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msK-gO-nJ1">
                                         <rect key="frame" x="184.66666666666669" y="0.0" width="133.66666666666669" height="28.333333333333332"/>
@@ -57,6 +60,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="forgotPasswordTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="li6-0R-gZA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

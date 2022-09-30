@@ -10,10 +10,12 @@ import UIKit
 final class WelcomeViewController: UIViewController {
     @IBOutlet var greetingsLabel: UILabel!
     
+    var labelTextValue: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         greetingsLabel.font = .systemFont(ofSize: 30)
-        greetingsLabel.text = "Hello, "
+        greetingsLabel.text = labelTextValue
     }
     
     override func viewWillAppear(_ animated: Bool) {
