@@ -46,13 +46,13 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameTapped() {
-        let alert = UIAlertController(title: "Oops!", message: "Your name is \(login)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Oops!", message: "Your name is \(login) 😉", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))
         self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func forgotPasswordTapped() {
-        let alert = UIAlertController(title: "Oops!", message: "Your password is \(password)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Oops!", message: "Your password is \(password) 🤭", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))
         self.present(alert, animated: true, completion: nil)
     }

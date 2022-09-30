@@ -111,14 +111,22 @@
                                     <segue destination="s8S-PT-e6n" kind="unwind" unwindAction="unwindFor:" id="uWK-fv-aaM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋🏻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cND-IC-Xqx">
+                                <rect key="frame" x="168" y="392" width="54" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4yb-FF-JH2"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="cND-IC-Xqx" firstAttribute="centerY" secondItem="CLe-xd-83J" secondAttribute="centerY" id="DSn-yM-O2Y"/>
                             <constraint firstItem="ChL-pj-00G" firstAttribute="centerX" secondItem="4yb-FF-JH2" secondAttribute="centerX" id="Ut5-T8-vMS"/>
                             <constraint firstItem="4yb-FF-JH2" firstAttribute="bottom" secondItem="ChL-pj-00G" secondAttribute="bottom" constant="152" id="df2-Zm-ba7"/>
                             <constraint firstItem="1v6-tO-p8P" firstAttribute="top" secondItem="4yb-FF-JH2" secondAttribute="top" constant="147" id="g1A-PC-8It"/>
                             <constraint firstItem="1v6-tO-p8P" firstAttribute="centerX" secondItem="4yb-FF-JH2" secondAttribute="centerX" id="m48-Fk-ykB"/>
+                            <constraint firstItem="cND-IC-Xqx" firstAttribute="centerX" secondItem="CLe-xd-83J" secondAttribute="centerX" id="z05-S0-Kd2"/>
                         </constraints>
                     </view>
                     <connections>
