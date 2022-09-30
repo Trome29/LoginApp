@@ -73,6 +73,10 @@
                             <constraint firstItem="p0a-i0-wEU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q3v-C2-Yjx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTF" destination="wuP-Dh-bf3" id="dgL-z8-lne"/>
+                        <outlet property="userNameTF" destination="n9o-Ff-V4p" id="K7b-Z3-cc6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,6 +101,9 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                                <connections>
+                                    <segue destination="s8S-PT-e6n" kind="unwind" unwindAction="unwindFor:" id="uWK-fv-aaM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4yb-FF-JH2"/>
@@ -113,6 +120,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fWk-jR-OaN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="s8S-PT-e6n" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="824.61538461538464" y="3.5545023696682461"/>
         </scene>
