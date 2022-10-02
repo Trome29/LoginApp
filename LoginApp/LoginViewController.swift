@@ -9,38 +9,39 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    //MARK: Private properties
-    private let login = "Tim Cook"
-    private let password = "11160"
-    
     //MARK: IBOutlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    //MARK: Private properties
+    private let login = "Tim Cook"
+    private let password = "11160"
+    
     //MARK: Methods
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        userNameTF.endEditing(true)
-        passwordTF.endEditing(true)
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         
         if userNameTF.text != login || passwordTF.text != password {
-            let alert = UIAlertController(
-                title: "Invalid login or password",
-                message: "Please, enter correct login and password",
-                preferredStyle: .alert
-            )
-            let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-                self.passwordTF.text = ""
-            }
-            alert.addAction(okAction)
-            self.present(alert, animated: true, completion: nil)
+            callAlert(title: "Invalid login or password", message: "Please, enter correct login and password")
         } else {
             welcomeVC.labelTextValue = "Hello, \(login)!"
         }
+    }
+    
+    
+    private func callAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        self.present(alert, animated: true, completion: nil)
     }
     
     //MARK: IBActions
@@ -50,23 +51,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameTapped() {
-        let alert = UIAlertController(
-            title: "Oops!",
-            message: "Your name is \(login) 😉",
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
-        self.present(alert, animated: true, completion: nil)
+        callAlert(title: "Oops!", message: "Your name is \(login) 😉")
     }
     
     @IBAction func forgotPasswordTapped() {
-        let alert = UIAlertController(
-            title: "Oops!",
-            message: "Your password is \(password) 🤭",
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
-        self.present(alert, animated: true, completion: nil)
+        callAlert(title: "Oops!", message: "Your password is \(password) 🤭")
     }
 }
 
