@@ -28,6 +28,7 @@ class UserBioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        aboutContactInfoLabel.textColor = .white
         view.addVerticalGradientLayer(topColor: topColor, bottomColor: bottomColor)
         aboutContactInfoLabel.text = info
     }
