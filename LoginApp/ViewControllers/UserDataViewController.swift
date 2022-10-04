@@ -8,34 +8,31 @@
 import UIKit
 
 class UserDataViewController: UIViewController {
+    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!
     @IBOutlet var countryLabel: UILabel!
     @IBOutlet var cityLabel: UILabel!
+    
+    
+    @IBOutlet var infoLabels: [UILabel]!
+    
     @IBOutlet var image: UIImageView!
     
-    private let person = Person.getUserData()
+    let welcomeVC = WelcomeViewController()
     
-    private let topColor =  UIColor(
-        red: 210/255,
-        green: 109/255,
-        blue: 128/255,
-        alpha: 1
-    )
-    private let bottomColor = UIColor(
-        red: 107/255,
-        green: 148/255,
-        blue: 230/255,
-        alpha: 1
-    )
+    private let person = Person.getUserInfo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addVerticalGradientLayer(topColor: topColor, bottomColor: bottomColor)
         
-        image.layer.cornerRadius = image.frame.width / 2
+        view.addVerticalGradientLayer(
+            topColor: welcomeVC.topColor,
+            bottomColor: welcomeVC.bottomColor
+        )
         
-        // Переделать
+        image.layer.cornerRadius = image.frame.height / 2
+        
         nameLabel.text = person.name
         surnameLabel.text = person.surname
         countryLabel.text = person.country
