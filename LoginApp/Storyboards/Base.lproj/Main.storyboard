@@ -250,6 +250,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cityLabel" destination="vFD-yw-V3F" id="b2n-Le-9bE"/>
+                        <outlet property="countryLabel" destination="P1x-3u-53B" id="f28-OD-vHK"/>
+                        <outlet property="nameLabel" destination="3ti-oA-SL5" id="rxT-DP-mdH"/>
+                        <outlet property="surnameLabel" destination="DPv-Xs-Dcz" id="lCk-qk-NFm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o0X-4n-hxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
