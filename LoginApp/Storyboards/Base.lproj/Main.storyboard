@@ -257,10 +257,6 @@
                         <outlet property="image" destination="nkm-7N-7mk" id="25Z-1f-Fx8"/>
                         <outlet property="nameLabel" destination="3ti-oA-SL5" id="Ff2-fi-Zid"/>
                         <outlet property="surnameLabel" destination="DPv-Xs-Dcz" id="Tzn-Rz-cMq"/>
-                        <outletCollection property="infoLabels" destination="3ti-oA-SL5" collectionClass="NSMutableArray" id="lbC-1H-OSA"/>
-                        <outletCollection property="infoLabels" destination="DPv-Xs-Dcz" collectionClass="NSMutableArray" id="aJr-gN-1vJ"/>
-                        <outletCollection property="infoLabels" destination="6Wv-tg-Zre" collectionClass="NSMutableArray" id="wyv-Xw-0IN"/>
-                        <outletCollection property="infoLabels" destination="P1x-3u-53B" collectionClass="NSMutableArray" id="lC6-wd-OQe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o0X-4n-hxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

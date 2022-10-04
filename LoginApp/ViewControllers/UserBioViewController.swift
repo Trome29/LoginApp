@@ -8,11 +8,10 @@
 import UIKit
 
 class UserBioViewController: UIViewController {
-
+    
     @IBOutlet var aboutContactInfoLabel: UILabel!
     
-    let welcomeVC = WelcomeViewController()
-    
+    private let welcomeVC = WelcomeViewController()
     private let info = Person.getUserBio()
     
     override func viewDidLoad() {

@@ -14,13 +14,9 @@ class UserDataViewController: UIViewController {
     @IBOutlet var countryLabel: UILabel!
     @IBOutlet var cityLabel: UILabel!
     
-    
-    @IBOutlet var infoLabels: [UILabel]!
-    
     @IBOutlet var image: UIImageView!
     
-    let welcomeVC = WelcomeViewController()
-    
+    private let welcomeVC = WelcomeViewController()
     private let person = Person.getUser()
     
     override func viewDidLoad() {
@@ -33,6 +29,7 @@ class UserDataViewController: UIViewController {
         
         image.layer.cornerRadius = image.frame.height / 2
         
+        // Хотел объеденить лейблы в 1 аутлет и через перебор аутлет коллекшн присваивать каждому текст, но подумал что это оверинжиниринг, поэтому вот так
         nameLabel.text = person.name
         surnameLabel.text = person.surname
         countryLabel.text = person.country
