@@ -12,6 +12,7 @@ class UserDataViewController: UIViewController {
     @IBOutlet var surnameLabel: UILabel!
     @IBOutlet var countryLabel: UILabel!
     @IBOutlet var cityLabel: UILabel!
+    @IBOutlet var image: UIImageView!
     
     private let person = Person.getUserData()
     
@@ -31,6 +32,8 @@ class UserDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: topColor, bottomColor: bottomColor)
+        
+        image.layer.cornerRadius = image.frame.width / 2
         
         // Переделать
         nameLabel.text = person.name
