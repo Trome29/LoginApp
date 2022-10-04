@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3011733128EC881A007F6D09 /* UserBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3011733028EC881A007F6D09 /* UserBioViewController.swift */; };
+		3011733328EC900D007F6D09 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3011733228EC900D007F6D09 /* User.swift */; };
+		3011733528EC901B007F6D09 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3011733428EC901B007F6D09 /* Person.swift */; };
 		303166A128E7155300DCD751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303166A028E7155300DCD751 /* AppDelegate.swift */; };
 		303166A328E7155300DCD751 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303166A228E7155300DCD751 /* SceneDelegate.swift */; };
 		303166A528E7155300DCD751 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303166A428E7155300DCD751 /* LoginViewController.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3011733028EC881A007F6D09 /* UserBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBioViewController.swift; sourceTree = "<group>"; };
+		3011733228EC900D007F6D09 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3011733428EC901B007F6D09 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		3031669D28E7155300DCD751 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		303166A028E7155300DCD751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		303166A228E7155300DCD751 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +81,7 @@
 				303166A428E7155300DCD751 /* LoginViewController.swift */,
 				303166B428E716A400DCD751 /* WelcomeViewController.swift */,
 				3087808D28EC784E0049F124 /* UserDataViewController.swift */,
+				3011733028EC881A007F6D09 /* UserBioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -109,6 +116,8 @@
 		3087808C28EC6D8A0049F124 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3011733228EC900D007F6D09 /* User.swift */,
+				3011733428EC901B007F6D09 /* Person.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,11 +193,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3011733128EC881A007F6D09 /* UserBioViewController.swift in Sources */,
 				303166A528E7155300DCD751 /* LoginViewController.swift in Sources */,
 				303166B528E716A400DCD751 /* WelcomeViewController.swift in Sources */,
 				3087808E28EC784E0049F124 /* UserDataViewController.swift in Sources */,
 				303166A128E7155300DCD751 /* AppDelegate.swift in Sources */,
 				303166A328E7155300DCD751 /* SceneDelegate.swift in Sources */,
+				3011733528EC901B007F6D09 /* Person.swift in Sources */,
+				3011733328EC900D007F6D09 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

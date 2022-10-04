@@ -26,11 +26,6 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-//        welcomeVC.login = login
-//    }
-    
     @IBAction func logInButtonDidTapped() {
         guard userNameTF.text == login, passwordTF.text == password else {
             callAlert(

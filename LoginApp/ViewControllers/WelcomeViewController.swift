@@ -11,8 +11,6 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet var greetingsLabel: UILabel!
     
-    var login = ""
-    
     private let topColor =  UIColor(
         red: 210/255,
         green: 109/255,
@@ -37,6 +35,7 @@ class WelcomeViewController: UIViewController {
 
 //MARK: - Set background color
 extension UIView {
+    
     func addVerticalGradientLayer(topColor: UIColor, bottomColor: UIColor) {
         let gradient = CAGradientLayer()
         gradient.frame = bounds

@@ -1,5 +1,5 @@
 //
-//  UserDataViewController.swift
+//  UserBioViewController.swift
 //  LoginApp
 //
 //  Created by Roman on 04.10.2022.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class UserDataViewController: UIViewController {
-    
+class UserBioViewController: UIViewController {
+
     private let topColor =  UIColor(
         red: 210/255,
         green: 109/255,
