@@ -19,5 +19,9 @@ struct Person {
             city: "Калининград"
         )
     }
+    
+    static func getUserBio() -> String {
+      "Много текста ."
+    }
 }
 

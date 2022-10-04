@@ -9,6 +9,10 @@ import UIKit
 
 class UserBioViewController: UIViewController {
 
+    @IBOutlet var aboutContactInfoLabel: UILabel!
+    
+    let info = Person.getUserBio()
+    
     private let topColor =  UIColor(
         red: 210/255,
         green: 109/255,
@@ -25,5 +29,6 @@ class UserBioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: topColor, bottomColor: bottomColor)
+        aboutContactInfoLabel.text = info
     }
 }
