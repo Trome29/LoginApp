@@ -11,7 +11,7 @@ struct Person {
     let country: String
     let city: String
     
-    static func getUserInfo() -> Person {
+    static func getUser() -> Person {
         Person(
             name: "Роман",
             surname: "Точин",

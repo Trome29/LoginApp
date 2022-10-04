@@ -21,7 +21,7 @@ class UserDataViewController: UIViewController {
     
     let welcomeVC = WelcomeViewController()
     
-    private let person = Person.getUserInfo()
+    private let person = Person.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
