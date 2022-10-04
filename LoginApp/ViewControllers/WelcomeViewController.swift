@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class WelcomeViewController: UIViewController {
+class WelcomeViewController: UIViewController {
     
     @IBOutlet var greetingsLabel: UILabel!
     
@@ -31,7 +31,7 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: topColor, bottomColor: bottomColor)
-        greetingsLabel.text = "Hello, \(login)!"
+        greetingsLabel.text = "Hello, Roman!"
     }
 }
 

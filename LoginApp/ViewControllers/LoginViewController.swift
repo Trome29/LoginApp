@@ -12,18 +12,24 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let login = "Tim Cook"
-    private let password = "11160"
+    private let login = "User"
+    private let password = "Password"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        userNameTF.text = login
+        passwordTF.text = password
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.login = login
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+//        welcomeVC.login = login
+//    }
     
     @IBAction func logInButtonDidTapped() {
         guard userNameTF.text == login, passwordTF.text == password else {

@@ -84,14 +84,14 @@
                     <connections>
                         <outlet property="passwordTF" destination="wuP-Dh-bf3" id="dgL-z8-lne"/>
                         <outlet property="userNameTF" destination="n9o-Ff-V4p" id="K7b-Z3-cc6"/>
-                        <segue destination="KzA-v3-OfN" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="E9g-oS-Owt"/>
+                        <segue destination="pJV-qj-jeB" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="E9g-oS-Owt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="103" y="4"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Home-->
         <scene sceneID="K36-ED-qKj">
             <objects>
                 <viewController id="KzA-v3-OfN" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -135,6 +135,7 @@
                             <constraint firstItem="Nz9-vu-4Jw" firstAttribute="centerX" secondItem="CLe-xd-83J" secondAttribute="centerX" id="n5F-hh-IoL"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="person.fill" catalog="system" id="l3s-Y1-qAJ"/>
                     <connections>
                         <outlet property="greetingsLabel" destination="1v6-tO-p8P" id="k8F-ZE-6Q8"/>
                     </connections>
@@ -142,10 +143,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fWk-jR-OaN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="s8S-PT-e6n" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="823" y="819"/>
+        </scene>
+        <!--User-->
+        <scene sceneID="fXK-3K-lcu">
+            <objects>
+                <viewController id="m4U-gq-sPd" customClass="UserDataViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OE6-Uw-cE4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFw-Fq-rQ6">
+                                <rect key="frame" x="139" y="274" width="41" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FYi-qn-R6u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="rVN-LJ-M3W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0X-4n-hxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1584" y="819"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aye-Xv-gWw">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pJV-qj-jeB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HMA-q2-uw3">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="KzA-v3-OfN" kind="relationship" relationship="viewControllers" id="kGE-Uv-pnC"/>
+                        <segue destination="m4U-gq-sPd" kind="relationship" relationship="viewControllers" id="Qm1-zi-6je"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4QW-KB-9Tt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="823.125" y="3.1690140845070425"/>
         </scene>
     </scenes>
     <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
