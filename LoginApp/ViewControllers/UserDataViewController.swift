@@ -16,23 +16,29 @@ class UserDataViewController: UIViewController {
     
     @IBOutlet var image: UIImageView!
     
-    private let welcomeVC = WelcomeViewController()
-    private let person = Person.getUser()
-    
+    var userData: UserData?
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addVerticalGradientLayer()
         
-        view.addVerticalGradientLayer(
-            topColor: welcomeVC.topColor,
-            bottomColor: welcomeVC.bottomColor
-        )
-        
-        image.layer.cornerRadius = image.frame.height / 2
-        
-        // Хотел объеденить лейблы в 1 аутлет и через перебор аутлет коллекшн присваивать каждому текст, но подумал что это оверинжиниринг, поэтому вот так
-        nameLabel.text = person.name
-        surnameLabel.text = person.surname
-        countryLabel.text = person.country
-        cityLabel.text = person.city
+        guard let user = userData else { return }
+        nameLabel.text = user.name
+        surnameLabel.text = user.surname
+        countryLabel.text = user.country
+        cityLabel.text = user.city
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        image.layer.cornerRadius = image.frame.size.height / 2
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let userBioVC = segue.destination as? UserBioViewController else { return }
+        userBioVC.userBio = userData?.userBio
+        userBioVC.title = "Биография \(userData?.name ?? "")а"
+    }
+    
+
 }

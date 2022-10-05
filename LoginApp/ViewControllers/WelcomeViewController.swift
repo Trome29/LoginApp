@@ -11,36 +11,11 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet var greetingsLabel: UILabel!
     
-    let topColor =  UIColor(
-        red: 210/255,
-        green: 109/255,
-        blue: 128/255,
-        alpha: 1
-    )
-    let bottomColor = UIColor(
-        red: 107/255,
-        green: 148/255,
-        blue: 230/255,
-        alpha: 1
-    )
-    
-    private let user = User.getUserData()
+    var userName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addVerticalGradientLayer(topColor: topColor, bottomColor: bottomColor)
-        greetingsLabel.text = "Hello, \(user.person.name)!"
-    }
-}
-
-extension UIView {
-    func addVerticalGradientLayer(topColor: UIColor, bottomColor: UIColor) {
-        let gradient = CAGradientLayer()
-        gradient.frame = bounds
-        gradient.colors = [topColor.cgColor, bottomColor.cgColor]
-        gradient.locations = [0.0, 1.0]
-        gradient.startPoint = CGPoint(x: 0, y: 0)
-        gradient.endPoint = CGPoint(x: 0, y: 1)
-        layer.insertSublayer(gradient, at: 0)
+        view.addVerticalGradientLayer()
+        greetingsLabel.text = "Hello, \(userName ?? "")!"
     }
 }
