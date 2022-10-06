@@ -135,7 +135,7 @@
                             <constraint firstItem="Nz9-vu-4Jw" firstAttribute="centerX" secondItem="CLe-xd-83J" secondAttribute="centerX" id="n5F-hh-IoL"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="person.fill" catalog="system" id="l3s-Y1-qAJ"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="l3s-Y1-qAJ"/>
                     <connections>
                         <outlet property="greetingsLabel" destination="1v6-tO-p8P" id="k8F-ZE-6Q8"/>
                     </connections>
@@ -336,6 +336,7 @@
     </scenes>
     <resources>
         <image name="2022-07-17 20.41.17" width="667" height="693"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
