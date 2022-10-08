@@ -11,13 +11,15 @@ class UserBioViewController: UIViewController {
     
     @IBOutlet var aboutContactInfoLabel: UILabel!
     
-    var userBio: String!
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer()
         
         aboutContactInfoLabel.textColor = .white
-        aboutContactInfoLabel.text = userBio
+        aboutContactInfoLabel.text = user.person.userBio
+        
+        title = "Биография \(user.person.name)а"
     }
 }
